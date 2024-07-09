@@ -1,1 +1,2 @@
-# Ejercicios-C
+# Ejercicios-C 
+alumno: Nahuel Hermosilla
