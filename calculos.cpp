@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 2
+//#define N 5
 #define PI 3.14159
 /* 
 	a) Realizar un menu.
@@ -9,6 +9,12 @@
 */
 
 int main(){
+	
+	int N;
+	
+	printf("Ingrese El tamaño del vector (sum,rest,mult y div): ");
+	scanf("%d", &N);
+	printf("\n");
 	
 	int opc;
 	int num[N];
@@ -37,23 +43,33 @@ int main(){
 					if(i==0){
 						resta = num[i];
 						mult = num[i];
-						div = num[i];
+						if(N == 2){
+							div = num[i];
+						}
 					}else{
 						resta -=num[i];
 						mult *=num[i];
-						if(num[1]!= 0){
-							div /= num[i];
+						if(N==2){
+							if(num[1]!= 0){
+								div /= num[i];
+							}
 						}
 					}
 				}
 				
 				printf("\nLa suma de los numeros es: %d",suma);
 				printf("\nLa resta de los numeros es: %d", resta);
-				printf("\nLa multiplicacion de los numeros es: %d",mult);
-				if(num[1] != 0){
-					printf("\nLa division de los numeros es: %.2f", div);
-				}else{
-					printf("\nError: No es posible dividir por cero");
+				if(N > 2){
+					printf("\nLa multiplicacion entre todos los numeros es: %d",mult);
+				}else if(N == 2){
+					printf("\nLa multiplicacion de los numeros es: %d",mult);
+				}
+				if(N==2){
+					if(num[1] != 0){
+						printf("\nLa division de los numeros es: %.2f", div);
+					}else{
+						printf("\nError: No es posible dividir por cero");
+					}
 				}
 				printf("\n\n");
 				
