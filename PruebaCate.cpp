@@ -17,7 +17,7 @@ int main (){
 		printf("\n2. Entero y positivo");
 		printf("\n3. Descuento entradas");
 		printf("\n4. Valor catering");
-		printf("\n5. ");
+		printf("\n5. Precio Uvas");
 		printf("\n0. Salir");
 		
 		printf("\n\nSeleccione una opcion: ");
